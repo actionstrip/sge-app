@@ -1,0 +1,19 @@
+'context-menu':
+  'atom-text-editor': [
+    {label: 'SGE Preview Chrome', command: 'sge-app:chromeopen'}
+  ]
+  '.tree-view .file > .name': [
+    {label: 'SGE Preview Chrome', command: 'sge-app:chromeopenfile'}
+  ]
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'SGE'
+      'submenu': [
+        { 'label': 'SGE Preview Chrome', 'command': 'sge-app:chromeopen' }
+      ]
+    ]
+  }
+]

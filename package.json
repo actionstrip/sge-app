@@ -1,0 +1,19 @@
+{
+  "name": "sge-app",
+  "main": "./lib/sge-app",
+  "version": "0.0.1",
+  "description": "sigong utils",
+  "repository": "https://github.com/",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+   "fs-plus": "2.x",
+    "humanize-plus": "~1.4.2",
+    "minimatch": "~0.3.0",
+    "temp": "~0.6.0",
+    "underscore-plus": "1.x",
+    "wrench": "^1.5"
+  }
+}
