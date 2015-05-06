@@ -3,9 +3,12 @@ url = require 'url'
 
 module.exports =
   config:
-    siteRoot:
+    localRoot:
       type: 'string'
       default: 'C:\\inetpub\\wwwroot'
+    siteRoot:
+      type: 'string'
+      default: 'localhost'
     chromePath:
       type: 'string'
       default: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
@@ -44,7 +47,7 @@ module.exports =
  openchrome = (path) ->
   console.log("path",path)
   exec = require('child_process').execFile
-  path = String(path).replace atom.config.get('sge-app.siteRoot'), "localhost"
+  path = String(path).replace atom.config.get('sge-app.localRoot'), atom.config.get('sge-app.siteRoot')
   chromePath = atom.config.get('sge-app.chromePath')
   exec chromePath , [path]
   #path = path.replace "C:\\inetpub\\wwwroot", "localhost"
