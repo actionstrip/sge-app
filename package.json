@@ -1,9 +1,12 @@
 {
   "name": "sge-app",
   "main": "./lib/sge-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "sigong utils",
-  "repository": "https://github.com/actionstrip/sge-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/actionstrip/sge-app.git"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
