@@ -3,7 +3,8 @@
     {label: 'SGE Preview Chrome', command: 'sge-app:chromeopen'}
   ]
   '.tree-view .file > .name': [
-    {label: 'SGE Preview Chrome', command: 'sge-app:chromeopenfile'}
+    {label: 'SGE Preview Chrome', command: 'sge-app:chromeopenfile'},
+    {label: 'SGE TS All Compile', command: 'sge-app:tscompile'}
   ]
 
 'menu': [
