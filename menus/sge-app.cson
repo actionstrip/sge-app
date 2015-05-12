@@ -1,10 +1,13 @@
 'context-menu':
   'atom-text-editor': [
-    {label: 'SGE Preview Chrome', command: 'sge-app:chromeopen'}
+    {label: 'SGE Preview Chrome', command: 'sge-app:chromeopen'},
+    {label: 'SGE TS All Compile', command: 'sge-app:tscompile'},
+    {label: 'SGE TS Create <script> ', command: 'sge-app:createtagts'}
   ]
   '.tree-view .file > .name': [
     {label: 'SGE Preview Chrome', command: 'sge-app:chromeopenfile'},
-    {label: 'SGE TS All Compile', command: 'sge-app:tscompile'}
+    {label: 'SGE TS All Compile', command: 'sge-app:tscompilefile'},
+    {label: 'SGE TS Create <script> ', command: 'sge-app:createtagtsfile'}
   ]
 
 'menu': [
@@ -13,7 +16,9 @@
     'submenu': [
       'label': 'SGE'
       'submenu': [
-        { 'label': 'SGE Preview Chrome', 'command': 'sge-app:chromeopen' }
+        { 'label': 'SGE Preview Chrome', 'command': 'sge-app:chromeopen' },
+        { 'label': 'SGE TS All Compile', 'command': 'sge-app:tscompile' },
+        { 'label': 'SGE TS Create <script>', 'command': 'sge-app:createtagts' }
       ]
     ]
   }
