@@ -71,7 +71,7 @@ module.exports =
  tscompilefile = ({target}) ->
   path = target.dataset.path
   return unless path
-  tscompile path
+  tscompileRun path
 
  tscompile = (path) ->
    editor = atom.workspace.getActiveTextEditor()
@@ -132,6 +132,7 @@ module.exports =
  createtagtsfile = ({target}) ->
   path = target.dataset.path
   return unless path
+  createtagtsRun path
 
  createtagts = (path) ->
    editor = atom.workspace.getActiveTextEditor()
@@ -174,8 +175,9 @@ module.exports =
     for n of tslines
       tsline = tslines[n]
       #console.log("tsline",tsline,(tsline.indexOf "reference"))
-      if ((tsline.indexOf "reference") > -1)
+      if ((tsline.indexOf "<reference") > -1)
         referPath = tsline.substring (tsline.indexOf '"')+1 , (tsline.lastIndexOf '"')
+        referPath = referPath.replace /.ts/,"" #jquery.d.ts 예외처리
         resolvePath = jpath.resolve(tsFileDir,referPath) # ./child , ../TeA  -> ./TeA
         relativePath = jpath.relative(tsRootPath,resolvePath)
         finalPath = "./" + relativePath.replace(/\\/g,"/")
