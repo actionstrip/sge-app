@@ -101,7 +101,8 @@ module.exports =
   outPath = tsRootPath + outPathTail + "\\" + atom.config.get('sge-app.alltsTojsName')
   console.log("outPathTail",outPathTail)
 
-  projectPath = atom.project.getPath()
+  #projectPath = atom.project.getPath()
+  projectPath = atom.project.path
   console.log("projectPath",projectPath)
   packagesPath = atom.packages.getPackageDirPaths()[0]
   console.log("packagesPath",packagesPath)
