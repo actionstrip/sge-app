@@ -170,13 +170,14 @@ module.exports =
     referObj[fileStr].refers=[];
     referArr.push referObj[fileStr]
     console.log("referArr--",referArr)
+    #console.log("fuck--",fileStr)
     tsBuf = fs.readFileSync (tsFilePath), 'utf8'
     tsTxt = tsBuf.toString();
     tslines = tsTxt.split "\n";
     for n of tslines
       tsline = tslines[n]
       #console.log("tsline",tsline,(tsline.indexOf "reference"))
-      if ((tsline.indexOf "<reference") > -1)
+      if ((tsline.indexOf "<reference") > -1 && (tsline.indexOf "path") > -1)
         referPath = tsline.substring (tsline.indexOf '"')+1 , (tsline.lastIndexOf '"')
         referPath = referPath.replace /.ts/,"" #jquery.d.ts 예외처리
         resolvePath = jpath.resolve(tsFileDir,referPath) # ./child , ../TeA  -> ./TeA
@@ -224,6 +225,8 @@ chkSort = (arr) ->
         for k of curObj.refers
           otherName= curObj.refers[k];
           otherObj = getObj otherName
+          #console.log("otherName",otherName)
+          #console.log("otherObj",otherObj)
           otherIndex =arr.indexOf otherObj
           curIndex = i;
           if sortFunc(curObj,otherObj) == 1 #otherObj 가 왼쪽에 있어야 하는데
