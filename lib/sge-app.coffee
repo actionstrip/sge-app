@@ -127,7 +127,7 @@ module.exports =
   #exec 'cmd' , ['/c','C:\\Users\\SM1450\\.atom\\packages\\sge-app\\tsc C:\\inetpub\\wwwroot\\sge\\app_0.0.1\\test2\\TeA.ts --out C:\\inetpub\\wwwroot\\sge\\app_0.0.1\\test2\\allts.js']
   #exec 'cmd' , ['/c', tscPath + ' C:\\inetpub\\wwwroot\\sge\\app_0.0.1\\test2\\TeA.ts --out C:\\inetpub\\wwwroot\\sge\\app_0.0.1\\test2\\allts.js']
   #exec 'cmd' , ['/c', tscPath + allTsFiles + ' --out ' + 'C:\\inetpub\\wwwroot\\sge\\app_0.0.1\\test2\\allts.js']
-  exec 'cmd' , ['/c', tscPath + allTsFiles + ' --out ' + outPath]
+  exec 'cmd' , ['/c', tscPath + allTsFiles + ' --out ' + outPath + ' --sourceMap']
   atom.notifications.addSuccess("SGE : complete complie " + outPath + " \u2665")
 
  createtagtsfile = ({target}) ->
