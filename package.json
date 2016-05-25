@@ -1,7 +1,7 @@
 {
   "name": "sge-app",
   "main": "./lib/sge-app",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "sigong utils",
   "repository": {
     "type": "git",
@@ -12,6 +12,6 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "typescript": "https://github.com/Arnavion/typescript-github/tarball/2015-05-06-3d0daef8eb08104920f9272b32d414b9266a5d78"
+    "typescript": "^1.5.3"
   }
 }
